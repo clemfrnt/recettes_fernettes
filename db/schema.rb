@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171222150049) do
+ActiveRecord::Schema.define(version: 20171222150853) do
 
-  create_table "recettes", force: :cascade do |t|
-    t.string   "titre"
+  create_table "recipes", force: :cascade do |t|
+    t.string   "title"
     t.text     "ingredients"
     t.text     "description"
     t.integer  "time"
@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 20171222150049) do
     t.integer  "utilisateur_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["utilisateur_id"], name: "index_recettes_on_utilisateur_id"
+    t.index ["utilisateur_id"], name: "index_recipes_on_utilisateur_id"
   end
 
-  create_table "utilisateurs", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
